@@ -104,20 +104,23 @@
     <!-- Hero Section -->
     <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="max-w-4xl w-full text-center">
-    <!-- 3D Avatar Container -->
+    <!-- 3D Avatar Container (Upper Body Zoom) -->
     <div class="inline-block relative w-64 h-64 mb-6 rounded-full bg-gradient-to-b from-gray-800 to-transparent border border-white/10 overflow-hidden shadow-2xl shadow-primary/20">
         <model-viewer 
             src="https://models.readyplayer.me/692aaaf2786317131ca4265e.glb" 
             alt="My 3D Avatar"
             auto-rotate
             camera-controls
+            disable-zoom
             shadow-intensity="1"
-            camera-orbit="0deg 90deg 3.5m"
+            camera-target="0m 1.45m 0m" 
+            camera-orbit="0deg 90deg 1.2m"
             field-of-view="30deg"
             interaction-prompt="none"
-            class="w-full h-full">
+            class="w-full h-full"
+            style="background-color: transparent;">
         </model-viewer>
-    </div>>
+    </div>
             
             <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
                 Hi, I'm <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Idan</span>
