@@ -8,6 +8,8 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Model Viewer for 3D Avatar -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -102,9 +104,20 @@
     <!-- Hero Section -->
     <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="max-w-4xl w-full text-center">
-            <div class="inline-block p-1 rounded-full bg-gradient-to-r from-primary to-secondary mb-6">
-                <img src="https://lh3.googleusercontent.com/gg-dl/ABS2GSn5HQiD-MWebcoJgJ6yEmJLeX-oTy4GZTgj-s0Z2uZF6HnqCxdujUS6IEhQiUbcjqmmWsXXS-pKCjnsM8k7f0X6CNzuPZvXSKv79ZfPY3agYuO8Ngc_NdT-2hjXVBHapiVb4NNv1jF5KZoxVGE7etmaJ59WudC53ueCIzCafCsTQfzH=s1024-rj" alt="Profile" class="w-32 h-32 rounded-full border-4 border-dark bg-dark">
-            </div>
+    <!-- 3D Avatar Container -->
+    <div class="inline-block relative w-64 h-64 mb-6 rounded-full bg-gradient-to-b from-gray-800 to-transparent border border-white/10 overflow-hidden shadow-2xl shadow-primary/20">
+        <model-viewer 
+            src="https://models.readyplayer.me/692aaaf2786317131ca4265e.glb" 
+            alt="My 3D Avatar"
+            auto-rotate
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="0deg 90deg 3.5m"
+            field-of-view="30deg"
+            interaction-prompt="none"
+            class="w-full h-full">
+        </model-viewer>
+    </div>>
             
             <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
                 Hi, I'm <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Idan</span>
